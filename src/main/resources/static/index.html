@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <div class="main-container">
+        <section class="content">
+            <h2>Add a Book</h2>
+            <form id="add-book-form">
+                <input type="text" id="isbn" name="ISBN" placeholder="ISBN" required>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+                <input type="text" id="author" name="author" placeholder="Author" required>
+                <select id="genre" name="genre" required>
+                    <option value="Literature">Literature</option>
+                    <option value="History">History</option>
+                    <option value="Education">Education</option>
+                    <option value="Computers">Computers</option>
+                </select>
+                <input type="text" id="location" name="location" placeholder="Location" required>
+                <button type="submit">Add Book</button>
+            </form>
+            <div id="response"></div>
+        </section>
+
+        <section class="content">
+            <h2>Add a Reader</h2>
+            <form id="add-reader-form">
+                <input type="text" id="tin" name="TIN" placeholder="TIN" required>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="number" id="age" name="age" placeholder="Age" required>
+                <select id="category" name="category" required>
+                    <option value="Student">Student</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="submit">Add Reader</button>
+            </form>
+            <div id="response-reader"></div>
+        </section>
+
+        <section class="content">
+            <h2>Lend a Book</h2>
+            <form id="lend-book-form">
+                <input type="text" id="lend-isbn" name="ISBN" placeholder="ISBN" title="ISBN is a unique identifier for books" required>
+                <input type="text" id="lend-tin" name="TIN" placeholder="TIN" title="TIN is a unique person identifier to associate each book with one person" required>
+                <input type="date" id="borrow-date" name="borrowDate" placeholder="Borrow Date">
+                <button type="submit">Lend Book</button>
+            </form>
+            <div id="response-lend"></div>
+        </section>
+
+        <section class="content">
+            <h2>Return a Book</h2>
+            <form id="return-book-form">
+                <input type="text" id="return-isbn" name="ISBN" placeholder="ISBN" title="ISBN is a unique identifier for books" required>
+                <input type="text" id="return-tin" name="TIN" placeholder="TIN" title="TIN is a unique person identifier to associate each book with one person" required>
+                <input type="date" id="return-date" name="returnDate" placeholder="Return Date">
+                <button type="submit">Return Book</button>
+            </form>
+            <div id="response-return"></div>
+        </section>
+
+        <div class="second-container">
+            <section class="content">
+                <h2>All Books</h2>
+                <button id="fetch-books">Fetch All Books</button>
+                <ul id="books-list"></ul>
+            </section>
+        
+            <section class="content">
+                <h2>All Readers</h2>
+                <button id="fetch-readers">Fetch All Readers</button>
+                <ul id="readers-list"></ul>
+            </section>
+        
+            <section class="content">
+                <h2>Books Currently on Loan</h2>
+                <button id="fetch-lended-books">Fetch Lended Books</button>
+                <ul id="lendedBooksList"></ul>
+            </section>
+        
+            <section class="content">
+                <h2>Loan Journal by Book</h2>
+                <button id="get-book-journal">Get Book Loan Journal</button>
+                <ul id="book-journal-list" class="journal-list"></ul>
+            </section>
+            
+            <section class="content">
+                <h2>Loan Journal by Reader</h2>
+                <button id="get-reader-journal">Get Reader Loan Journal</button>
+                <ul id="reader-journal-list" class="journal-list"></ul>
+            </section>
+
+            <section class="content">
+                <h2>Best Reader</h2>
+                <button id="fetch-best-reader">Fetch Best Reader</button>
+                <div id="best-reader"></div>
+            </section>
+
+            <section class="content">
+                <h2>Best Book</h2>
+                <button id="fetch-best-book">Fetch Best Book</button>
+                <div id="best-book"></div>
+            </section>
+        </div>
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

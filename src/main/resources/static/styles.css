@@ -1,0 +1,138 @@
+/* General styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Container for the sections */
+.main-container, .second-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.second-container {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #bde7ff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Styling for the content section */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1 1 calc(50% - 40px); /* Adjust this to control the size of the boxes */
+    max-width: calc(50% - 40px); /* Adjust this to control the size of the boxes */
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+/* Styling for the form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="date"] {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+
+/* Style for the loan journal, books, reader and lent books  list */
+.journal-list, #books-list, #readers-list, #lendedBooksList {
+    list-style-type: none; /* Remove default bullet points */
+}
+
+/* Style for individual list items */
+.journal-list li, #books-list li, #readers-list li, #lendedBooksList li {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    background-color: #b5ffd7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+/* Style for the last list item to remove the bottom border */
+.journal-list li:last-child, #books-list li:last-child {
+    border-bottom: none;
+}
+
+
+#best-book, #best-reader {
+    padding: 10px;
+    font-size: 20px;
+    margin: 0 0 0 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    max-width: 600px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Apply styles only when the element is not empty */
+#best-book:not(:empty), #best-reader:not(:empty) {
+    background-color: #f7ff8a;
+    border: none;
+}
