@@ -12,7 +12,7 @@
    - [Handler Execution (Taking the `AddBookHandler` as an example)](#handler-execution-taking-the-addbookhandler-as-an-example)
 
 ## Introduction
-This project is implemented as a Full-stack Web Application designed for managing a bookstore. Users can add books and readers, lend books, return books, and view various records and statistics. The application is accessible via a web browser at `http://localhost:8000`.
+This project is implemented as a Full-stack Web Application designed for managing a library. Users can add books and readers, lend books, return books, and view various records and statistics. The application is accessible via a web browser at `http://localhost:8000`.
 
 For this project, I researched the best practices used in large projects and I applied the principles of `Single Responsibility Principle` (SRP) and `Separation of Concerns`.
 
@@ -48,7 +48,7 @@ For this project, I researched the best practices used in large projects and I a
 ### Structure
 
 ```plaintext
-Bookstore/
+library-management-system/
 ├── src/
 │   ├── main/
 │   │   ├── java/
